@@ -1,4 +1,4 @@
-# 🚆 BERANGKATIN - Sistem Informasi Tiket Kereta Api
+# BERANGKATIN - Sistem Informasi Tiket Kereta Api
 
 **BERANGKATIN** adalah aplikasi web berbasis Laravel yang dirancang untuk memberikan solusi cerdas dalam reservasi tiket kereta api. Proyek ini mengedepankan efisiensi kode menggunakan **Blade Template Engine** dan antarmuka modern yang responsif.
 
