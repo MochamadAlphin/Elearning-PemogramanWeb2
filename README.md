@@ -1,23 +1,48 @@
-A. Struktur Layout Blade (Mastering)
-Proyek ini menggunakan teknik Template Inheritance. Struktur utama berada pada layouts/app.blade.php sebagai parent file yang menyediakan kerangka HTML.
-@yield('content'): Digunakan untuk menyisipkan konten dinamis dari halaman anak.
-@extends('layouts.app'): Digunakan pada home.blade.php untuk mewarisi struktur utama.
+# 🚆 BERANGKATIN - Sistem Informasi Tiket Kereta Api
 
-B. Komponen Modular (@include)
-Untuk efisiensi kode dan kemudahan pemeliharaan (maintenance), bagian yang berulang dipisahkan ke dalam folder partials/:
-@include('partials.navbar'): Memuat navigasi dengan efek Glassmorphism.
-@include('partials.footer'): Memuat informasi hak cipta dan kontak.
+**BERANGKATIN** adalah aplikasi web berbasis Laravel yang dirancang untuk memberikan solusi cerdas dalam reservasi tiket kereta api. Proyek ini mengedepankan efisiensi kode menggunakan **Blade Template Engine** dan antarmuka modern yang responsif.
 
-C. Tampilan Responsif & Banner Fullscreen
-Halaman utama menggunakan Hero Banner Fullscreen dengan tinggi 100vh. Hal ini memastikan gambar latar belakang (background1.jpg) menutupi seluruh layar pengguna di berbagai perangkat.
-Warna Brand: Deep Blue (#2d2a70) dan Orange (#ed6b23).
-Grid System: Menggunakan Bootstrap Grid (row, col-md-3) untuk memastikan fitur utama tersusun rapi di desktop dan bertumpuk secara vertikal di mobile.
+---
 
-D. Pengolahan Data Dinamis
-Data fitur layanan dikirimkan melalui Controller dan ditampilkan menggunakan sintaks Blade:
-{{ $variable }}: Untuk mencetak string.
-@foreach: Untuk melakukan iterasi pada data array fitur sistem.
+## 🚀 Fitur Utama & Kriteria Teknis
 
+Proyek ini dibangun dengan memenuhi standar pengembangan web Laravel modern:
+
+### 🏗️ 1. Struktur Layout Blade (Mastering)
+Mengimplementasikan teknik **Template Inheritance** untuk memisahkan struktur utama dengan konten spesifik.
+* **Master Layout:** `resources/views/layouts/app.blade.php` sebagai *parent file*.
+* **`@yield('content')`**: Placeholder dinamis untuk menyisipkan konten dari halaman anak.
+* **`@extends('layouts.app')`**: Digunakan pada `home.blade.php` untuk mewarisi kerangka utama aplikasi.
+
+### 🧩 2. Komponen Modular (@include)
+Menerapkan konsep **DRY (Don't Repeat Yourself)** dengan memisahkan bagian UI yang berulang ke dalam folder `partials/`:
+* `@include('partials.navbar')`: Navigasi utama dengan efek *Glassmorphism*.
+* `@include('partials.footer')`: Informasi hak cipta dan profil pengembang.
+
+### 📱 3. Desain Responsif & Banner Fullscreen
+Antarmuka pengguna yang adaptif menggunakan **Bootstrap 5.3**:
+* **Hero Section:** Banner fullscreen (`100vh`) yang memastikan visual tetap proporsional di semua ukuran layar.
+* **Warna Identitas:** Perpaduan harmonis antara *Deep Blue* (`#2d2a70`) dan *Vibrant Orange* (`#ed6b23`).
+* **Grid System:** Menggunakan `row` dan `col-md-3` untuk tata letak fitur yang rapi di desktop dan fleksibel di perangkat mobile.
+
+### 📊 4. Pengolahan Data Dinamis
+Menampilkan informasi secara efisien melalui integrasi Controller dan Blade:
+* `{{ $variable }}`: Digunakan untuk mencetak data string secara aman.
+* `@foreach`: Melakukan iterasi pada data array (seperti daftar fitur sistem) untuk penyajian data yang dinamis.
+
+---
+
+## 📂 Struktur Folder Blade
+Berikut adalah organisasi file template pada proyek ini:
+
+```text
+resources/views/
+├── layouts/
+│   └── app.blade.php        <-- Master Layout (Parent)
+├── partials/
+│   ├── navbar.blade.php     <-- Modular Component (Nav)
+│   └── footer.blade.php     <-- Modular Component (Footer)
+└── home.blade.php           <-- Main Content (Child)
 Footer Dan Navbar
 <img width="1896" height="867" alt="image" src="https://github.com/user-attachments/assets/905b7d71-2186-44ab-913c-35c4b5de532f" />
 <img width="1896" height="868" alt="image" src="https://github.com/user-attachments/assets/c8279ec9-fcbc-4998-9012-260bc56a66af" />
